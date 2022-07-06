@@ -1,0 +1,161 @@
+gui:
+  title:
+    activePage: "&b&l&n活动页&e&l(Pvp)"
+  button:
+    activePage:
+      introduction:
+        materialName: "PAINTING"
+        displayName: "&b&l&n介绍"
+        lore:
+          - "&e&l这里是介绍"
+          - "&e&l排行"
+          - "&e&l{(rank)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      yellow1:
+        materialName: "PAINTING"
+        displayName: "&b&l&n黄队1 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      yellowGuide:
+        materialName: "PAINTING"
+        displayName: "&b&l&n黄队1vs黄队2"
+        lore:
+          - "&e&l介绍"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      yellow2:
+        materialName: "PAINTING"
+        displayName: "&b&l&n黄队2 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      orange1:
+        materialName: "PAINTING"
+        displayName: "&b&l&n橙队1 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      orangeGuide:
+        materialName: "PAINTING"
+        displayName: "&b&l&n橙队1vs橙队2"
+        lore:
+          - "&e&l介绍"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      orange2:
+        materialName: "PAINTING"
+        displayName: "&b&l&n橙队2 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      green1:
+        materialName: "PAINTING"
+        displayName: "&b&l&n绿队1 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      greenGuide:
+        materialName: "PAINTING"
+        displayName: "&b&l&n绿队1vs绿队2"
+        lore:
+          - "&e&l介绍"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      green2:
+        materialName: "PAINTING"
+        displayName: "&b&l&n绿队2 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      blue1:
+        materialName: "PAINTING"
+        displayName: "&b&l&n黄队1 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      blueGuide:
+        materialName: "PAINTING"
+        displayName: "&b&l&n蓝队1vs蓝队2"
+        lore:
+          - "&e&l介绍"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      blue2:
+        materialName: "PAINTING"
+        displayName: "&b&l&n黄队2 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      purple1:
+        materialName: "PAINTING"
+        displayName: "&b&l&n紫队1 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      purpleGuide:
+        materialName: "PAINTING"
+        displayName: "&b&l&n紫队1vs紫队2"
+        lore:
+          - "&e&l介绍"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []
+      purple2:
+        materialName: "PAINTING"
+        displayName: "&b&l&n紫队2 人数 {amount}"
+        lore:
+          - "&e&l成员"
+          - "&e&l{(member)}"
+        amount: 1
+        itemFlag:
+          - "HIDE_DESTROYS"
+        customModelData: []

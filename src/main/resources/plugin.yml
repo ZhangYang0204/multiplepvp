@@ -1,0 +1,8 @@
+name: MultiplePvp
+version: 1.0.0
+main: pers.zhangyang.multiplepvp.MultiplePvp
+api-version: 1.13
+
+commands:
+  MultiplePvp:
+    aliases: mp

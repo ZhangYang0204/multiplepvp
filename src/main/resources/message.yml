@@ -1,0 +1,44 @@
+message:
+  actionBar:
+    ready: "&b&l还有 {s} 秒开始"
+    rest: "&b&l还有 {s} 秒结束"
+  component:
+    activeStart: "&b&l活动开始了，大家快来报名,&b&l&n点我即可"
+  chat:
+    startActive:
+      - "&b&l活动被你设置为了开始,并自动给全员发送了提示"
+    out:
+      - "&c&l{player} 淘汰了 {target}"
+    notPermission:
+      - "&c&l无权限"
+    notPlayer:
+      - "&c&l只有玩家可以执行"
+    respawn:
+      - "&c&l{player} 复活了"
+    notFriendDamage:
+      - "&c&l不能友伤"
+    raceStart:
+      - "&b&l比赛开始了，准备好战斗"
+    activeStop:
+      - "&b&l活动停止了,无法报名"
+    help:
+      - "&b&l帮助。"
+      - "/mp help        查看帮助"
+      - "/mp join        打开gui"
+      - "/mp startActive        开启活动"
+      - "/mp reload        重载"
+    raceNotAllStop:
+      - "&c&l比赛尚未全部结束"
+    raceStop:
+      - "&b&l{name} 的比拼结束，{king} 是战神, 队伍 {team} 赢了，奖励已自动发放。"
+    notFair:
+      - "&c&l人数不公平，无法加入"
+    notEnoughPeople:
+      - "&c&l你所在的组人数不足，无法开始"
+    notInRace:
+      - "&c&l不在比赛，不用退出"
+    leaveRace:
+      - "&c&l离开了比赛"
+
+    reload:
+      - "&c&l重载成功"

@@ -1,0 +1,176 @@
+setting:
+  antiFly:   #禁止飞行的世界,记得加上比赛的世界
+    - "custom_world"
+    - "custom_world2"
+  friendDamage: false
+  activeTime: 10    #比赛开始的准备时间
+  fairGap: 1   #最多相差几人时可以加入
+  reward:
+    lose:
+      min: 1
+      command:
+        - "give {player} iron_block 1"
+    win:
+      min: 1
+      command:
+        - "give {player} diamond 2"
+    mvp:
+      min: 5   #最少杀几个人可以发
+      command:
+        - "give {player} diamond_block 5"
+
+
+  race:
+    "yellow":
+      respawn: 5
+      time: 30
+      name: "黄"
+      world: "ceshi"
+      lobby2:
+        x: -14.0
+        y: 159.0
+        z: -16.0
+        yaw: 0.0
+        pitch: 0.0
+      lobby1:
+        x: -14.0
+        y: 159.0
+        z: -27.0
+        yaw: 0.0
+        pitch: 0.0
+      spawnLocation:
+        1:
+          x: -18.0
+          y: 157.0
+          z: -21.0
+          yaw: 0.0
+          pitch: 0.0
+        2:
+          x: -8.0
+          y: 157.0
+          z: -21.0
+          yaw: 0.0
+          pitch: 0.0
+    "orange":
+      respawn: 5
+      time: 60
+      name: "橙"
+      world: "ceshi"
+      lobby2:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      lobby1:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      spawnLocation:
+        1:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+        2:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+
+    "green":
+      respawn: 5
+      time: 60
+      name: "绿"
+      world: "ceshi"
+      lobby2:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      lobby1:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      spawnLocation:
+        1:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+        2:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+
+    "blue":
+      respawn: 5
+      time: 60
+      name: "蓝"
+      world: "ceshi"
+      lobby2:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      lobby1:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      spawnLocation:
+        1:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+        2:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+
+    "purple":
+      respawn: 5
+      time: 60
+      name: "紫"
+      world: "ceshi"
+      lobby2:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      lobby1:
+        x: 32.0
+        y: 73.0
+        z: 62.0
+        yaw: 0.0
+        pitch: 0.0
+      spawnLocation:
+        1:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
+        2:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          yaw: 0.0
+          pitch: 0.0
