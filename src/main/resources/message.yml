@@ -11,10 +11,10 @@ message:
       - "&c&l{player} 淘汰了 {target}"
     notPermission:
       - "&c&l无权限"
+    full:
+      - "&c&l人满了"
     notPlayer:
       - "&c&l只有玩家可以执行"
-    respawn:
-      - "&c&l{player} 复活了"
     notFriendDamage:
       - "&c&l不能友伤"
     raceStart:

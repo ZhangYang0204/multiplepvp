@@ -1,4 +1,5 @@
 setting:
+  maxPeople: 5 #队伍人数上线
   antiFly:   #禁止飞行的世界,记得加上比赛的世界
     - "custom_world"
     - "custom_world2"

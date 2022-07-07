@@ -128,41 +128,6 @@ public class Race {
         racing=true;
         readying=false;
         startTime=System.currentTimeMillis();
-
-        new BukkitRunnable() {
-            private int timeRest=Race.this.time;
-            @Override
-            public void run() {
-                String title=MessageYaml.INSTANCE.getString("message.actionBar.rest");
-                String m=ReplaceUtil.replace(title, Collections.singletonMap("{s}",timeRest+""));
-                if (m!=null){
-                    m= ChatColor.translateAlternateColorCodes('&',m);
-                }
-                BaseComponent text = new TextComponent(m);
-                for (Player p:playerList1){
-
-                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR,text);
-                }for (Player p:playerList2){
-
-                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR,text);
-                }
-                timeRest--;
-                if (time* 1000L +startTime< System.currentTimeMillis()){
-                    this.cancel();
-                    stop();
-                    return;
-                }
-                List<Player> list=new ArrayList<>(outTime.keySet());
-                for (Player p: list){
-                    if (outTime.get(p)+ respawnTime *1000L< System.currentTimeMillis()){
-                        respawn(p);
-                        outTime.remove(p);
-                    }
-                }
-
-            }
-        }.runTaskTimer(MultiplePvp.instance,1,20);
-
         if (playerList1.isEmpty()||playerList2.isEmpty()){
             for (Player p:playerList1){
                 MessageUtil.sendMessageTo(p, MessageYaml.INSTANCE.getStringList("message.chat.notEnoughPeople"));
@@ -174,6 +139,40 @@ public class Race {
             clear();
             return;
         }
+        new BukkitRunnable() {
+            private int timeRest=Race.this.time;
+            @Override
+            public void run() {
+                String title=MessageYaml.INSTANCE.getString("message.actionBar.rest");
+                if (title!=null) {
+                    String m = ReplaceUtil.replace(title, Collections.singletonMap("{s}", timeRest + ""));
+                    m = ChatColor.translateAlternateColorCodes('&', m);
+                    BaseComponent text = new TextComponent(m);
+                    for (Player p : playerList1) {
+
+                        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, text);
+                    }
+                    for (Player p : playerList2) {
+
+                        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, text);
+                    }
+                }
+                timeRest--;
+                if (time* 1000L +startTime< System.currentTimeMillis()){
+                    this.cancel();
+                    stop();
+                    return;
+                }
+                /*List<Player> list=new ArrayList<>(outTime.keySet());
+                for (Player p: list){
+                    if (outTime.get(p)+ respawnTime *1000L< System.currentTimeMillis()){
+                        respawn(p);
+                        outTime.remove(p);
+                    }
+                }*/
+
+            }
+        }.runTaskTimer(MultiplePvp.instance,1,20);
 
         for (int i=0;i<playerList1.size();i++){
             playerList1.get(i).teleport(location1);
@@ -192,10 +191,8 @@ public class Race {
             ReplaceUtil.replace(stringList,rep);
         }
         for(Player p:playerList1){
-
             MessageUtil.sendMessageTo(p, stringList);
         }for(Player p:playerList2){
-
             MessageUtil.sendMessageTo(p, stringList);
         }
 
@@ -216,14 +213,14 @@ public class Race {
         if (playerList1.contains(player)){
             Location l=player.getLocation();
             player.spigot().respawn();
-            player.teleport(l);
-            player.setGameMode(GameMode.SPECTATOR);
+            player.teleport(location1);/*
+            player.setGameMode(GameMode.SPECTATOR);*/
         }
         if (playerList2.contains(player)){
             Location l=player.getLocation();
             player.spigot().respawn();
-            player.teleport(l);
-            player.setGameMode(GameMode.SPECTATOR);
+            player.teleport(location2);/*
+            player.setGameMode(GameMode.SPECTATOR);*/
         }
     }
 
@@ -332,6 +329,18 @@ public class Race {
 
     }
 
+    public boolean isFull1(){
+        if (playerList1.size()>=SettingYaml.INSTANCE.getIntegerDefault("setting.maxPeople")){
+            return true;
+        }
+        return false;
+    }
+    public boolean isFull2(){
+        if (playerList2.size()>=SettingYaml.INSTANCE.getIntegerDefault("setting.maxPeople")){
+            return true;
+        }
+        return false;
+    }
     public boolean canJoin1(){
         return playerList1.size() - playerList2.size() <= SettingYaml.INSTANCE.getIntegerDefault("setting.fairGap");
     }public boolean canJoin2(){

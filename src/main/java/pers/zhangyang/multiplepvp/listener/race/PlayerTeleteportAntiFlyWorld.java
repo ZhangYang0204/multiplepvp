@@ -18,6 +18,9 @@ public class PlayerTeleteportAntiFlyWorld implements Listener {
         Player player= event.getPlayer();
         List<World> worldList=new ArrayList<>();
 
+        if (event.getTo().getWorld().equals(event.getFrom().getWorld())){
+            return;
+        }
         if (SettingYaml.INSTANCE.getStringList("setting.antiFly")==null){
             return;
         }

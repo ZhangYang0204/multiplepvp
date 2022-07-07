@@ -47,10 +47,8 @@ public void on(EntityDamageByEntityEvent event){
         }
 
     for(Player p:race.getPlayerList1()){
-
         MessageUtil.sendMessageTo(p, stringList);
     }for(Player p:race.getPlayerList2()){
-
             MessageUtil.sendMessageTo(p, stringList);
         }
 

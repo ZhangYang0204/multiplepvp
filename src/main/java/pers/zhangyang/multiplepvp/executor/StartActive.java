@@ -58,13 +58,13 @@ public class StartActive extends ExecutorBase {
 
                 String title=MessageYaml.INSTANCE.getString("message.actionBar.ready");
 
-                for (Player p:Bukkit.getOnlinePlayers()){
-                    String m=ReplaceUtil.replace(title, Collections.singletonMap("{s}",activeTime[0]+""));
-                    if (m!=null){
-                        m= ChatColor.translateAlternateColorCodes('&',m);
+                if (title!=null) {
+                    for (Player p : Bukkit.getOnlinePlayers()) {
+                        String m = ReplaceUtil.replace(title, Collections.singletonMap("{s}", activeTime[0] + ""));
+                        m = ChatColor.translateAlternateColorCodes('&', m);
+                        BaseComponent text = new TextComponent(m);
+                        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, text);
                     }
-                    BaseComponent text = new TextComponent(m);
-                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR,text);
                 }
                 activeTime[0]--;
 
@@ -84,7 +84,6 @@ public class StartActive extends ExecutorBase {
                     RaceManager.INSTANCE.blue.start();
                     RaceManager.INSTANCE.purple.start();
                     cancel();
-                    return;
                 }
             }
         }.runTaskTimer(MultiplePvp.instance,1,20);

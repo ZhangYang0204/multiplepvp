@@ -30,84 +30,123 @@ public class PlayerClickActivePage implements Listener {
 
         switch (slot){
             case 9:
-                if (RaceManager.INSTANCE.yellow.canJoin1()) {
-                    RaceManager.INSTANCE.yellow.join1(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.yellow.isFull1()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.yellow.canJoin1()) {
+                        RaceManager.INSTANCE.yellow.join1(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 27:
-
-                if (RaceManager.INSTANCE.yellow.canJoin2()) {
-                RaceManager.INSTANCE.yellow.join2(player);
-                ActivePage.refresh();
+                if (RaceManager.INSTANCE.yellow.isFull2()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.yellow.canJoin2()) {
+                        RaceManager.INSTANCE.yellow.join2(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 11:
-                if (RaceManager.INSTANCE.orange.canJoin1()) {
-                    RaceManager.INSTANCE.orange.join1(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.orange.isFull1()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.orange.canJoin1()) {
+                        RaceManager.INSTANCE.orange.join1(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 29:
-                if (RaceManager.INSTANCE.orange.canJoin2()) {
-                RaceManager.INSTANCE.orange.join2(player);
-                ActivePage.refresh();
+                if (RaceManager.INSTANCE.orange.isFull2()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.orange.canJoin2()) {
+                        RaceManager.INSTANCE.orange.join2(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 13:
-                if (RaceManager.INSTANCE.green.canJoin1()) {
-                    RaceManager.INSTANCE.green.join1(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.green.isFull1()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.green.canJoin1()) {
+                        RaceManager.INSTANCE.green.join1(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 31:
-                if (RaceManager.INSTANCE.green.canJoin2()) {
-                    RaceManager.INSTANCE.green.join2(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.green.isFull2()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.green.canJoin2()) {
+                        RaceManager.INSTANCE.green.join2(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 15:
-                if (RaceManager.INSTANCE.blue.canJoin1()) {
-                    RaceManager.INSTANCE.blue.join1(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.blue.isFull1()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.blue.canJoin1()) {
+                        RaceManager.INSTANCE.blue.join1(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 33:
-                if (RaceManager.INSTANCE.blue.canJoin2()) {
-                RaceManager.INSTANCE.blue.join2(player);
-                ActivePage.refresh();
+                if (RaceManager.INSTANCE.blue.isFull2()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.blue.canJoin2()) {
+                        RaceManager.INSTANCE.blue.join2(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 17:
-                if (RaceManager.INSTANCE.purple.canJoin1()) {
-                    RaceManager.INSTANCE.purple.join1(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.purple.isFull1()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.purple.canJoin1()) {
+                        RaceManager.INSTANCE.purple.join1(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
             case 35:
-                if (RaceManager.INSTANCE.purple.canJoin2()) {
-                    RaceManager.INSTANCE.purple.join2(player);
-                    ActivePage.refresh();
+                if (RaceManager.INSTANCE.purple.isFull2()){
+                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.full"));
                 }else {
-                    MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    if (RaceManager.INSTANCE.purple.canJoin2()) {
+                        RaceManager.INSTANCE.purple.join2(player);
+                        ActivePage.refresh();
+                    } else {
+                        MessageUtil.sendMessageTo(player, MessageYaml.INSTANCE.getStringList("message.chat.notFair"));
+                    }
                 }
                 break;
         }
