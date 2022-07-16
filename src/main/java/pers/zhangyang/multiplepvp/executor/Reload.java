@@ -29,10 +29,7 @@ public class Reload extends ExecutorBase {
             MessageYaml.INSTANCE.init();
             DataYaml.INSTANCE.init();
             GuiYaml.INSTANCE.init();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        } catch (InvalidConfigurationException e) {
+        } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
             return;
         }

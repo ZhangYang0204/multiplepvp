@@ -37,6 +37,9 @@ public void on(EntityDamageByEntityEvent event){
     if (race.isFriend(player,target)){
         return;
     }
+    if (target.isDead()){
+        return;
+    }
     race.kill(player);
         List<String> stringList=MessageYaml.INSTANCE.getStringList("message.chat.out");
         Map<String,String> rep=new HashMap<>();
